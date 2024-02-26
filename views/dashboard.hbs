@@ -1,0 +1,37 @@
+<div class="container">
+    <form action="/api/logout" method="post">
+        <button type="submit" style="float:right; width: fit-content;">LOGOUT</button>
+    </form>
+    <h1>Dashboard</h1>
+    <h1>Welcome {{ name }} </h1>
+</div>
+<div class="container">
+    <h3>Your Order:</h3>
+    <div class="images">
+        {{#if orders}}
+            {{#each orders}}
+            <div class="container" style="width: fit-content;">
+                <div class="thumb">
+                    <a href="/car/{{ this.car_id }}">{{ this.orderdetails.car_name }}</a>
+                    <br>
+                    Price: {{ this.car_price }}
+                    <br>
+                    Color: {{ this.car_color }}
+                    <div class="car-details">
+                        <p>Delivering to:</p>
+                        <br>
+                        <div class="container">
+                            <p>{{ this.addr_hname }}</p>
+                            <p>{{ this.addr_sname }}</p>
+                            <p>{{ this.addr_cname }}</p>
+                            <p>{{ this.addr_pcode }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        {{else}}
+            <p>No Order found.</p>
+        {{/if}}
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<section class="cars-section dark">
+    <div class="main-box">
+        <h2>EXCLUSIVE STOCK</h2>
+        <div class="images">
+            {{#if cars}}
+                {{#each cars}}
+                    <div class="thumb">
+                        <a href="/car/{{ this.car_id }}"><img src="{{ this.img_link }}"
+                                alt="{{ this.img_alt }}"></a>
+                        <div class="car-details">
+                            <p1>{{ this.car_name }}</p1>
+                            <p2>${{ this.car_price }}</p2>
+                        </div>
+                    </div>
+                {{/each}}
+            {{/if}}
+        </div>
+        <div class="clear"></div>
+        <div class="More">
+            <p>
+                <b1>More Comming Soon</b1>
+            </p>
+        </div>
+    </div>
+</section>

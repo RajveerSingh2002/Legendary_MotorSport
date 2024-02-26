@@ -1,0 +1,47 @@
+<header class="about-header">
+    <a href="/car/{{ car_id }}"><img class="logo" src="/images/static/back button.png" alt="site logo"></a>
+</header>
+<div class="container">
+    <h1>CHECKOUT</h1>
+    <h2>Your Total is ${{ car_price }}</h2>
+    <form action="/api/buy" method="post">
+        <div class="hidden">
+            <input name="car_id" value="{{ car_id }}" required>
+            <input name="car_color" value="{{ requested_car_color }}" required>
+            <input name="car_price" value="{{ car_price }}" required>
+        </div>
+        <label for="fname">Username:</label>
+        <input type="text" placeholder="" name="username" value="{{ username }}" required>
+        <br>
+        <label for="fname">Email:</label>
+        <input type="text" placeholder="" name="email" required>
+        <br>
+        <label for="fname">Phone:</label>
+        <input type="text" placeholder="" name="phone" required>
+        <br>
+        <br>
+        <fieldset>
+            <legend>Address:</legend>
+            <label for="addr_hname">House/Apartment Number</label>
+            <input type="text" name="addr_hname" required><br><br>
+            <label for="addr_sname">Street</label>
+            <input type="text" name="addr_sname" required><br><br>
+            <label for="addr_cname">City:</label>
+            <input type="text" name="addr_cname" required><br><br>
+            <label for="addr_pcode">Postal Code:</label>
+            <input type="text" name="addr_pcode" required><br><br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>CARD DETAILS:</legend>
+            <label for="name_on_card">Name on Card</label>
+            <input type="text" name="name_on_card" required><br><br>
+            <label for="card_number">Card Number</label>
+            <input type="text" name="card_number" required><br><br>
+            <label for="card_pin">PIN:</label>
+            <input type="text" name="card_pin" required><br><br>
+        </fieldset>
+        <br>
+        <button type="submit">BUY</button>
+    </form>
+</div>

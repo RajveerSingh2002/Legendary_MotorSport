@@ -1,0 +1,53 @@
+<section class="content">
+    <div class="review lil-dark">
+        <div class="car-logo">
+            <img src="{{ car.img_link }}" class="cheetah_logo" alt="{{ car.img_alt }}">
+        </div>
+        <div class="car-title">
+            <div class="car-name">
+                {{ car.car_name }}
+            </div>
+            <div class="price">
+                $ {{ car.car_price }}
+            </div>
+        </div>
+        <div class="car-description">
+            <div class="description">
+                <p>The cause of more UFO sightings across San Andreas than any other production vehicle of the decade,
+                    the Proto is the kind of concept car you get when your head of R&D is an 8 year old child with a
+                    stack of comics and a bowlful of MDMA. The future is here.</p>
+            </div>
+            <div class="color-available">
+                COLOR AVAILABLE
+            </div>
+            <div class="stats-graph">
+                {{!-- <img src="/images/stats/Cheetah Classic.png" alt="Cheetah-stats"> --}}
+            </div>
+            <div class="image">
+                {{!-- <img src="/images/cars/cheetah/Cheetah Classic_details.png" alt="Cheetah Classic"> --}}
+            </div>
+            <form action="/api/checkout" method="post">
+                <div class="hidden">
+                    <input name="car_id" value="{{ car.car_id }}">
+                    <input name="car_name" value="{{ car.car_name }}">
+                    <input name="car_price" value="{{ car.car_price }}">
+                </div>
+                <div class="color1">
+                    RED: <input class="button1" type="radio" id="html" name="car_color" value="red" required>
+                    PINK: <input class="button2" type="radio" id="html" name="car_color" value="pink" required>
+                    YELLOW: <input class="button3" type="radio" id="html" name="car_color" value="yellow" required>
+                    ORANGE: <input class="button4" type="radio" id="html" name="car_color" value="orange" required>
+                </div>
+                <div class="color2">
+                    GREEN: <input class="button5" type="radio" id="html" name="car_color" value="green" required>
+                    BLUE: <input class="button6" type="radio" id="html" name="car_color" value="blue" required>
+                    BLACK: <input class="button7" type="radio" id="html" name="car_color" value="black" required>
+                    WHITE: <input class="button8" type="radio" id="html" name="car_color" value="white" required>
+                </div>
+                <div class="order-button">
+                    <button type="submit">ORDER</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,1181 @@
+/* -------------------------------------------------- */
+/* BASIC SETUP */
+/* -------------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #a11717;
+    color: #ffffff;
+    font-family: 'Arial', 'Helvetica', 'sans-serif';
+    font-size: 15px;
+    font-weight: 300;
+    background-image: url(/images/bg-pattern.png);
+    border-color: #ff1a1a;
+}
+
+body {
+  background-color: black !important;
+  font-family: Arial, sans-serif;
+  color: whitesmoke !important;;
+}
+
+.hidden {
+  display: none;
+}
+
+
+/* -------------------------------------------------- */
+/* REUSABLE ELEMENTS */
+/* -------------------------------------------------- */
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #270303;
+}
+
+h1 {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fffefe41;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  
+}
+
+button {
+  background-color: #A11717;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+  font-size: 16px;
+  width: 30%;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+
+
+
+/* -------------------------------------------------- */
+/* OUR CARS SECTION */
+/* -------------------------------------------------- */
+
+.header {
+  width: 100%;
+  height: 20%;
+  justify-content: center;
+  align-items: center;
+  background: #20060671;
+}
+
+.home_logo img {
+  position: relative;
+  width: 10%;
+  /* height: 1%; */
+  left: 20px;
+  padding: 5px;
+}
+
+.home_logo2 img {
+  background-color: #ffffffa9;
+  border-radius: 10px;
+  position: relative;
+  width: 2.5rem;
+  /* height: 20%; */
+  right:10px;
+  padding: 5px;
+  float: right;
+  top: 15px;
+}
+
+.dropbtn {
+  background-color: transparent;
+  color: white;
+  padding: 16px;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #685f5f3a;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: rgb(255, 255, 255);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f144;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: #161616;}
+
+/* CAR SECTION */
+
+.cars-section {
+    width: 80%;
+    border: 2px solid #610000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    background: #200505;
+}
+
+.main-box h2 {
+    margin-left: 10%;
+    margin-top: 4%;
+    color: #f6f4e6;
+}
+
+.cars-section .images {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    transition: 0.5s;
+
+}
+
+.cars-section .btn {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    padding: 30px;
+    position: relative;
+}
+
+.cars-section .images img {
+    height: 190px;
+    width: 360px;
+    
+}
+
+.images img:hover {
+  transform: scale(1.1);
+  z-index: 2;
+  box-shadow: 0px 0px 10px #ff00001f,
+              0px 0px 20px #ff00001f,
+              0px 0px 40px #ff00001f;
+  
+}
+
+.cars-section .images .thumb {
+    background-color: black;
+    margin: 35px;
+    float: left;
+    text-align: center;
+    color: #f6f4e6;
+    font-size: 20px;
+}
+
+.main-box .More {
+    font-family:'Fugaz One', cursive;
+    font-size: medium;
+    color: white;
+    margin: auto;
+    text-align: center;
+    width: 100px;
+    height: 80px;
+    text-shadow: 0 5px black;
+} 
+
+/* -------------------------------------------------- */
+/* ADDRESS AND FORM SECTION */
+/* -------------------------------------------------- */
+
+
+
+.location-section, .form-section {
+    border-top: 7px solid #000000;
+    margin-top: 10%;
+    width: 50%;
+    float: left;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    filter: contrast(1);
+}
+
+.location-section {
+    border: 1px solid #610000;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.90)), url('../images/pexels-helena-lopes-1904076.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    text-align: center;
+}
+
+.location-section .p{
+    font-size: 30px;
+    line-height: 40px;
+    
+}
+
+.location-section .p2{
+    margin-top: 5px;
+}
+
+.location-section h3 {
+    font-size: 25px;
+}
+
+/* FORM */
+
+.form-section {
+  background-color: #610000;
+  display: contents;
+}
+
+.form-section h4 {
+    font-size: 25px;
+    text-align: center;
+    color: #f6f4e6;
+    padding: 15px;
+}
+
+.form-section form {
+    /* border-top: 7px solid #000000; */
+    text-align: center;
+    margin-top: 5px;
+    font-size: 25px;
+    line-height: 46px;
+}
+
+.form-section form input{
+    background-color: #f6f4e6;
+    border: 0;
+    height: 30px;
+    width: 70%;
+    padding: 4px;
+    border-radius: 10px;
+}
+
+.form-section form #address{
+    height: 130px;
+}
+
+.form-section form #submit {
+    background-color: #fdc93a;
+    border: none;
+    height: 30px;
+    width: 50%;
+    border-radius: 10px;
+    font-size: medium;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+.form-section form #submit:hover {
+    transform: scale(1.10);
+}
+
+/* -------------------------------------------------- */
+/* FOOTER */
+/* -------------------------------------------------- */
+
+.footer img {
+    /* filter: contrast(1); */
+    /* text-align:center; */
+    height: 0%;
+    width: 100%;
+    margin-bottom: -295px;
+} 
+
+
+
+/* -------------------------------------------------- */
+/* GROTI PAGE */
+/* -------------------------------------------------- */
+
+.groti-page .banner-section {
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+}
+
+.groti-page .banner-section img {
+    max-width: 100%;
+    height: auto !important;
+    filter: brightness(75%);
+}
+
+.groti-page .logo {
+    margin-left: 20px;
+    margin-top: 5px;
+    width: 50px;
+    height: 50px;
+}
+
+.groti-page .content {
+    width: 80%;
+    border: 2px solid #610000;
+    margin-left: 10%;
+    background: #200505;
+    /* height: 900px; */
+} 
+
+.groti-page .grotti_logo {
+    position: absolute;
+    margin-left: 2.5%;
+    margin-bottom: 2.5%;
+    width: 55px;
+    height: 70px;
+}
+
+.groti-page .car-title{
+    font-size:xx-large;
+    align-items: center;
+    margin-left: 11%;
+    margin-top:  5%;
+}
+
+.groti-page .price{
+    position: relative;
+    bottom: 35px;
+    right: 35px;   
+    text-align:right; 
+}
+
+.groti-page .description {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: medium;
+    margin-top: 2%;
+    margin-left: 3%;
+    width: 400px;
+    height: 170px;
+}
+
+.groti-page .car-description {
+    height: 800px;
+}
+
+.groti-page .color-available {
+    font-size:x-large;
+    width: 400px;
+    height: 90;
+    margin-top: 1%;
+    margin-left: 3%;
+}
+
+
+.color1 .button1 {
+    height: 55px;
+    width: 55px;
+    background-color: rgb(255, 0, 0);
+    accent-color: rgb(255, 0, 0);
+    border-color: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 2%;
+    margin-left: 4%;
+}
+
+.color1 .button2 {
+    height: 55px;
+    width: 55px;
+    background-color: rgb(255, 0, 191);
+    accent-color: rgb(255, 0, 191);
+    border-color: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 2%;
+    margin-left: 4%;
+}
+
+.color1 .button3 {
+    height: 55px;
+    width: 55px;
+    background-color: rgb(251, 255, 0);
+    accent-color: rgb(251, 255, 0);
+    border-color: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 2%;
+    margin-left: 4%;
+}
+
+.color1 .button4 {
+    height: 55px;
+    width: 55px;
+    background-color: rgb(255, 102, 0);
+    accent-color: rgb(255, 102, 0);
+    border-color: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 2%;
+    margin-left: 4%;
+}
+
+.color2 .button5 {
+    height: 55px;
+    width: 55px;
+    background-color: rgb(30, 255, 0);
+    accent-color: rgb(30, 255, 0);
+    border-color: #ffffff;
+    border-radius: 50%;
+    display:inline-block;
+    margin-top: 2%;
+    margin-left: 4%;
+}
+
+.color2 .button6 {
+    height: 55px;
+    width: 55px;
+    background-color: rgb(0, 162, 255);
+    accent-color: rgb(0, 162, 255);
+    border-color: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 2%;
+    margin-left: 4%;
+}
+
+.color2 .button7 {
+    height: 55px;
+    width: 55px;
+    background-color: rgb(0, 0, 0);
+    accent-color: rgb(0, 0, 0);
+    border-color: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 2%;
+    margin-left: 4%;
+}
+
+.color2 .button8 {
+    height: 55px;
+    width: 55px;
+    background-color: rgb(255, 255, 255);
+    accent-color: rgb(255, 255, 255);
+    border-color: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 2%;
+    margin-left: 4%;
+}
+
+
+.groti-page .stats-graph {
+    margin-left: 3%;
+    margin-top: 2%;
+}
+
+.groti-page .order {
+    height: 75px;
+    width: 400px;
+    margin-left: 3%;
+    margin-top: 2%;
+    border-radius: 8px;
+    background-color:#A11717;
+    border-color: #a11717;
+    font-size: x-large;
+    color: #ffffff;
+}
+
+
+.groti-page .image {
+    position: relative;
+    margin-top: 5%;
+    height: 500px;
+    width: 500px;
+    bottom: 735px;
+    left: 500px;   
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+   background-image: url(images/cars/groti/groti_details1.png);
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* -------------------------------------------------- */
+/* FORM ORDER */
+/* -------------------------------------------------- */
+
+.form_order-section {
+/* border-top: 7px solid #000000; */
+margin-top: -265px;
+margin-left: 50%;
+width: 50%;
+float: left;
+padding-top: 20px;
+padding-bottom: 30px;
+filter: contrast(1);
+}
+
+.form_order-section h4 {
+    font-size: 25px;
+    text-align: center;
+    color: #f6f4e6;
+}
+
+.form_order-section form {
+    /* border-top: 7px solid #000000; */
+    text-align: center;
+    margin-top: 20px;
+    font-size: 25px;
+    line-height: 46px;
+}
+
+.form_order-section form input{
+    background-color: #f6f4e6;
+    border: 0;
+    height: 30px;
+    width: 70%;
+    padding: 4px;
+    border-radius: 10px;
+}
+
+/* .form_order-section form #address{
+    height: 130px;
+} */
+
+.form_order-section form #submit {
+    height: 75px;
+    width: 400px;
+    margin-left: 3%;
+    margin-top: 15%;
+    border-radius: 8px;
+    background-color:#A11717;
+    border-color: #a11717;
+    font-size: x-large;
+    color: #ffffff;
+}
+
+.form_order-section form #submit:hover {
+    transform: scale(1.10);
+}
+
+/* ------------------------------------- */
+/* color "radio button" */
+/* ------------------------------------- */
+/* The container */
+
+.container_orange {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: inline-block;
+  }
+  
+  .container_red {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: inline-block;
+  }
+  
+  .container_pink {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: inline-block;
+  }
+  
+  .container_yellow {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: inline-block;
+  }
+  
+  .container_green {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: inline-block;
+  }
+
+  .container_blue {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: inline-block;
+  }
+
+  .container_black {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: inline-block;
+  }
+
+  .container_white {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: inline-block;
+  }
+
+  /* Hide the browser's default radio button */
+  
+  .container_orange input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .container_red input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .container_yellow input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .container_pink input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .container_green input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .container_blue input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .container_black input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .container_white input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark_orange {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    background-color: #FF6600;
+    border-radius: 50%;
+    margin-left: 45px;
+    margin-top: 0px;
+  }
+  
+  .checkmark_red {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    background-color:red;
+    border-radius: 50%;
+    margin-top: 0px;
+  }
+  
+  .checkmark_yellow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    background-color:yellow;
+    border-radius: 50%;
+    margin-left: 30px;
+    margin-top: 0px;
+  }
+  
+  .checkmark_pink {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    background-color:#FF00BF;
+    border-radius: 50%;
+    margin-left: 15px;
+    margin-top: 0px;
+  }
+  
+  .checkmark_green {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    background-color:#1EFF00;
+    border-radius: 50%;
+    margin-top: 0px;
+  }
+
+  .checkmark_blue {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    background-color:#00A2FF;
+    border-radius: 50%;
+    margin-left: 15px;
+    margin-top: 0px;
+  }
+
+  .checkmark_black {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    border-radius: 50%;
+    margin-left: 30px;
+    margin-top: 0px;
+  }
+
+  .checkmark_white {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    background-color:white;
+    border-radius: 50%;
+    margin-left: 45px;
+    margin-top: 0px;
+  }
+  
+  /* On mouse-over, add a grey background color (not need)
+  .container:hover input ~ .checkmark {
+    background-color: #059862;
+  }
+  
+  When the radio button is checked, add a blue background (not need)
+  .container input:checked ~ .checkmark {
+    background-color: #059862;
+  } */
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark_orange:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  .checkmark_red:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  .checkmark_pink:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .checkmark_yellow:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  .checkmark_green:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  .checkmark_blue:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  .checkmark_black:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  .checkmark_white:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the indicator (dot/circle) when checked */
+  .container_orange input:checked ~ .checkmark_orange:after {
+    display: block;
+  }
+  
+  .container_red input:checked ~ .checkmark_red:after {
+    display: block;
+  }
+
+  .container_pink input:checked ~ .checkmark_pink:after {
+    display: block;
+  }
+  
+  .container_yellow input:checked ~ .checkmark_yellow:after {
+    display: block;
+  }
+
+  .container_green input:checked ~ .checkmark_green:after {
+    display: block;
+  }
+
+  .container_blue input:checked ~ .checkmark_blue:after {
+    display: block;
+  }
+
+  .container_black input:checked ~ .checkmark_black:after {
+    display: block;
+  }
+
+  .container_white input:checked ~ .checkmark_white:after {
+    display: block;
+  }
+  /* Style the indicator (dot/circle) */
+  .container_orange .checkmark_orange:after {
+        top: 16px;
+      left: 16px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: black;
+  }
+  
+  .container_red .checkmark_red:after {
+       top: 16px;
+      left: 16px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: black;
+  }
+
+  .container_pink .checkmark_pink:after {
+    top: 16px;
+   left: 16px;
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+   background: black;
+}
+
+.container_yellow .checkmark_yellow:after {
+    top: 16px;
+   left: 16px;
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+   background: black;
+}
+
+.container_green .checkmark_green:after {
+    top: 16px;
+   left: 16px;
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+   background: black;
+}
+
+.container_blue .checkmark_blue:after {
+    top: 16px;
+   left: 16px;
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+   background: black;
+}
+
+.container_black .checkmark_black:after {
+    top: 16px;
+   left: 16px;
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+   background: white;
+}
+
+.container_white .checkmark_white:after {
+    top: 16px;
+   left: 16px;
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+   background: black;
+}
+
+.banner-section {
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+}
+
+.banner-section img {
+  max-width: 100%;
+  height: auto !important;
+  filter: brightness(75%);
+}
+
+.logo {
+  margin-left: 20px;
+  margin-top: 5px;
+  width: 50px;
+  height: 50px;
+}
+
+.content {
+  width: 80%;
+  border: 2px solid #610000;
+  margin-left: 10%;
+  background: #200505;
+} 
+
+.coil_logo {
+  position: absolute;
+  margin-left: 2%;
+  margin-bottom: 5%;
+  width: 100px;
+  height: 85px;
+}
+
+.car-title{
+  font-size:xx-large;
+  align-items: center;
+  margin-left: 13%;
+  margin-top:  5%
+  
+}
+
+.price{
+  position: relative;
+  bottom: 35px;
+  right: 35px;   
+  text-align:right; 
+}
+
+.description {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: medium;
+  margin-top: 2%;
+  margin-left: 3%;
+  width: 400px;
+  height: 170px;
+}
+
+.car-description {
+  height: 800px;
+}
+
+.color-available {
+  font-size:x-large;
+  width: 400px;
+  height: 90;
+  margin-top: 8%;
+  margin-left: 3%;
+}
+
+.car-logo img{
+  height: 300px;
+  width: 500px;
+}

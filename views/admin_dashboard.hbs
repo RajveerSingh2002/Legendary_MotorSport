@@ -1,0 +1,57 @@
+<div class="container" style="background-color: dimgray;">
+    <form action="/api/logout" method="post">
+        <button type="submit" style="float:right; width: fit-content;">LOGOUT</button>
+    </form>
+    <h1>Dashboard</h1>
+    <h2>Welcome {{ name }} </h2>
+</div>
+<div class="container" style="background-color: dimgray;">
+    <h3>All Sales:</h3>
+    <div class="images">
+        {{#if orders}}
+            {{#each orders}}
+            <div class="container" style="width: fit-content;">
+                <div class="thumb">
+                    <a href="/car/{{ this.car_id }}">{{ this.orderdetails.car_name }}</a>
+                    <br>
+                    Price: {{ this.car_price }}
+                    <br>
+                    Color: {{ this.car_color }}
+                    <div class="car-details">
+                        <p>Delivering to:</p>
+                        <br>
+                        <div class="container">
+                            <p>{{ this.addr_hname }}</p>
+                            <p>{{ this.addr_sname }}</p>
+                            <p>{{ this.addr_cname }}</p>
+                            <p>{{ this.addr_pcode }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        {{else}}
+            <p>No Order found.</p>
+        {{/if}}
+    </div>
+</div>
+<div class="container" style="background-color: dimgray;">
+    <h3>All Registrations:</h3>
+    <div class="images">
+        {{#if users}}
+            {{#each users}}
+            <div class="container" style="width: fit-content;">
+                <div class="thumb">
+                    Username: {{ this.username }}
+                    <br>
+                    Name: {{ this.name }}
+                    <br>
+                    Role: {{ this.role }}
+                </div>
+            </div>
+            {{/each}}
+        {{else}}
+            <p>No Order found.</p>
+        {{/if}}
+    </div>
+</div>
